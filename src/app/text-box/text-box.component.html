@@ -1,0 +1,22 @@
+<div class="textBox">
+  <h3>TEXT</h3>
+  <p>Nodes:</p>
+  <div *ngFor="let node of nodes">
+    <span>Node {{node.label}}</span>
+  </div>
+  <input type="text" [(ngModel)]="newNode">
+  <button (click)="addNewNode()">Add Node</button>
+  <p>Edges:</p>
+    <div *ngFor="let edge of edges">
+    <span>Link {{nodeIdLabelMap.get(edge.from)}} {{nodeIdLabelMap.get(edge.to)}}</span>
+  </div>
+  <span>Link </span>
+  <select [(ngModel)]="fromNode">
+    <option *ngFor="let node of nodes" [ngValue]="node">{{node.label}}</option>
+  </select>
+  <span> and </span>
+  <select [(ngModel)]="toNode">
+    <option *ngFor="let node of nodes" [ngValue]="node">{{node.label}}</option>
+  </select>
+  <button (click)="addNewEdge()">Add Edge</button>
+</div>
