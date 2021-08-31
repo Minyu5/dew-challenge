@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Edge, Node, Network, DataSet } from "vis-network/standalone";
+import { Edge, Node, Network, DataSet } from "vis";
 import { DataService } from "../../service/data.service";
 
 @Component({
